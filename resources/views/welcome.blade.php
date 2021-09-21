@@ -17,15 +17,136 @@
   <!-- MAIN STYLE -->
   <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
+<style>
+  .carousel-wrapper {
+      width: 520px;
+      height: 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+      border-radius: 20px;
+      margin: 100px auto 20px;
+  }
 
+  .carousel-container {
+      width: 400px;
+      height: 250px;
+      overflow: hidden;
+      margin: 0 auto;
+  }
+
+  .carousel {
+      display: flex;
+      width: 1200px;
+      animation: sliding 12s infinite;
+  }
+
+  .carousel div {
+      width: 400px;
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+  }
+
+  .carousel:hover {
+      animation-play-state: paused;
+  }
+
+  .carousel .image-one {
+      background-image: url("https://cdn.erakomp.co.id/assets/5278.jpg");
+  }
+
+  .carousel .image-two {
+      background-image: url("https://cdn.erakomp.co.id/assets/20944999.jpg");
+  }
+
+  .carousel .image-three {
+      background-image: url("https://cdn.erakomp.co.id/assets/5498791.jpg");
+  }
+
+  @keyframes sliding {
+      30% {
+          transform: translateX(0);
+      }
+
+      35% {
+          transform: translateX(-400px);
+      }
+
+      65% {
+          transform: translateX(-400px);
+      }
+
+      70% {
+          transform: translateX(-800px);
+      }
+
+      98% {
+          transform: translateX(-800px);
+      }
+
+      100% {
+          transform: translateX(0);
+      }
+  }
+
+  @media screen and (max-width: 768px) {
+      .carousel-wrapper {
+          width: 312px;
+          height: 210px;
+      }
+
+      .carousel-container {
+          width: 240px;
+          height: 150px;
+      }
+
+      .carousel {
+          width: 720px;
+      }
+
+      .carousel>div {
+          width: 240px;
+          height: 150px;
+      }
+
+      @keyframes sliding {
+          30% {
+              transform: translateX(0);
+          }
+
+          35% {
+              transform: translateX(-400px);
+          }
+
+          65% {
+              transform: translateX(-400px);
+          }
+
+          70% {
+              transform: translateX(-800px);
+          }
+
+          98% {
+              transform: translateX(-800px);
+          }
+
+          100% {
+              transform: translateX(0);
+          }
+      }
+  }
+</style>
 <body>
 
   <!-- MENU -->
   <nav class="navbar navbar-expand-sm navbar-light">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Yukeva</a>
+      <a class="navbar-brand" href="index.html"><img src="https://cdn.erakomp.co.id/assets/Logo%20Yukeva%20Website-05%20(1).png" alt="" style="max-width: 120px;"></a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,9 +160,9 @@
           <li class="nav-item">
             <a href="#about" class="nav-link"><span data-hover="About Us">About Us</span></a>
           </li>
-          <li class="nav-item">
-            <a href="#project" class="nav-link"><span data-hover="Our Team">Our Team</span></a>
-          </li>
+         <!-- <li class="nav-item">
+            <a href="#pic" class="nav-link"><span data-hover="Our Team">Our Team</span></a>
+          </li>-->
           <li class="nav-item">
             <a href="#serv" class="nav-link"><span data-hover="Services">Services</span></a>
           </li>
@@ -83,7 +204,6 @@
               perks and benefits that customer may enjoy by shopping with us.
 
             </p>
-
             <div class="custom-btn-group mt-4">
               <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Contact Us</a>
             </div>
@@ -92,7 +212,7 @@
 
         <div class="col-lg-5 col-md-12 col-12">
           <div class="about-image svg">
-            <img src="https://cdn.erakomp.co.id/assets/yukeva/1.png" class="img-fluid" alt="image">
+            <i class="color-mode-logo"></i>
           </div>
         </div>
 
@@ -101,6 +221,50 @@
   </section>
 
  
+<!--IMAGES CAROUSEL-->
+
+<!--<section class="about full-screen d-lg-flex justify-content-center align-items-center" id="pic">
+  <div class="container">
+    <div class="row" style="margin-top: -10%!important;">
+
+      <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+        <div class="about-text">
+          <h1 style="color:#FFD700;">Our Team</h1>
+          <h1 class="animated animated-text">
+
+          </h1>
+          <div class="row">
+            <div class="col-sm-7">
+              <div class="carousel-wrapper" style="background: white!important;">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="image-one"></div>
+                        <div class="image-two"></div>
+                        <div class="image-three"></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
+
+        
+    
+          
+        </div>
+      </div>
+
+      <div class="col-lg-5 col-md-12 col-12" style="margin-top: 20%;">
+        <div class="about-image svg">
+          <p>We proudly present you our amazing team who's ready to help you.
+
+          </p>        
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>-->
+
 
   <!-- FEATURES -->
   <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="serv">
@@ -113,7 +277,8 @@
           <div class="timeline">
             <div class="timeline-wrapper">
               <div class="timeline-yr">
-                <span><img src="https://cdn.erakomp.co.id/assets/yukeva/icons8-company-100.png" alt="" srcset="" style="max-width: 50px;"></span>
+                <span><i class="color-mode-iso"></i>
+                </span>
               </div>
               <div class="timeline-info">
                 <h3>ISO COMPLIANT
@@ -125,7 +290,7 @@
 
             <div class="timeline-wrapper">
               <div class="timeline-yr">
-                <span><img src="https://cdn.erakomp.co.id/assets/yukeva/icons8-company-100.png" alt="" srcset="" style="max-width: 50px;"></span>
+                <span><i class="color-mode-phy"></i></span>
               </div>
               <div class="timeline-info">
                 <h3>PHYSICAL STORAGE SOLUTION
@@ -138,7 +303,7 @@
 
             <div class="timeline-wrapper">
               <div class="timeline-yr">
-                <span><img src="https://cdn.erakomp.co.id/assets/yukeva/icons8-company-100.png" alt="" srcset="" style="max-width: 50px;"></span>
+                <span><i class="color-mode-man"></i></span>
               </div>
               <div class="timeline-info">
                 <h3>MANAGED IT SERVICES
@@ -150,7 +315,7 @@
 
             <div class="timeline-wrapper">
               <div class="timeline-yr">
-                <span><img src="https://cdn.erakomp.co.id/assets/yukeva/icons8-company-100.png" alt="" srcset="" style="max-width: 50px;"></span>
+                <span><i class="color-mode-dedi"></i></span>
               </div>
               <div class="timeline-info">
                 <h3>DEDICATED & PROFESSIONAL SALES</h3>
@@ -161,7 +326,7 @@
 
             <div class="timeline-wrapper">
               <div class="timeline-yr">
-                <span><img src="https://cdn.erakomp.co.id/assets/yukeva/icons8-company-100.png" alt="" srcset="" style="max-width: 50px;"></span>
+                <span><i class="color-mode-net"></i></span>
               </div>
               <div class="timeline-info">
                 <h3>NETWORK SOLUTIONS
@@ -174,7 +339,7 @@
 
             <div class="timeline-wrapper">
               <div class="timeline-yr">
-                <span><img src="https://cdn.erakomp.co.id/assets/yukeva/icons8-company-100.png" alt="" srcset="" style="max-width: 50px;"></span>
+                <span><i class="color-mode-cs"></i></span>
               </div>
               <div class="timeline-info">
                 <h3>SUPPORT CONSULTING
@@ -189,8 +354,8 @@
           </div>
         </div>
 
-        <div class="col-lg-6 col-12">
-          <img src="https://cdn.erakomp.co.id/assets/yukeva/about-left-image.png" alt="" style="width:600px;">
+        <div class="col-lg-6 col-12 right-img">
+          <img src="https://cdn.erakomp.co.id/assets/yukeva/about-left-image.png" alt="" style="width:500px;">
         </div>
 
       </div>
@@ -209,37 +374,59 @@
               width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
 
-          <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
-            <div class="contact-info-item">
-              <a href="#" ><img src="https://cdn.erakomp.co.id/assets/yukeva/fb.png" alt="" style="max-width:20px!important; margin-right:5px;" ></a>
-              <a href="#"><img src="https://cdn.erakomp.co.id/assets/yukeva/ig.png" alt="" style="max-width:20px!important; margin-right:5px;"></a>
-
-              <a href="#" ><img src="https://cdn.erakomp.co.id/assets/yukeva/twitter.png" alt="" style="max-width:20px!important; margin-right:5px;"></a>
-
-            </div>
-
-            <ul class="social-links">
-
-            </ul>
-          </div>
+         
         </div>
 
         <div class="col-lg-6 col-12">
           <div class="contact-form">
             <h2 class="mb-4" style="color:#FFD700;">Contact Us</h2>
-            <p class="footer-text mb-0"><img src="https://cdn.erakomp.co.id/assets/yukeva/placeholder.png"
-                style="margin-right: 20px; max-width: 20px;" /> Jl.
-              Pembangunan II No.
-              7E <br>
-              Petojo Utara - Gambir <br>Jakarta Pusat 10130 - DKI Jakarta</p>
+            <div class="row">
+              <div class="col-sm-1">
+                <img src="https://cdn.erakomp.co.id/assets/yukeva/placeholder.png"
+                style="max-width: 20px;" />
+              </div>
+              <div class="col-sm-10">
+                <p>Jl.
+                  Pembangunan II No.
+                  7E 
+                  Petojo Utara - Gambir Jakarta Pusat 10130 - DKI Jakarta</p>
+              </div>
+            </div>
+            
+<br>
+<div class="row">
+  <div class="col-sm-1">
+    <img src="https://cdn.erakomp.co.id/assets/yukeva/4.png" alt="" srcset=""
+                style="max-width: 30px;">
+  </div>
+  <div class="col-sm-10">
+    <p>+1 234
+      567 8900</p>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-1">
+    <img src="https://cdn.erakomp.co.id/assets/yukeva/mail.png"
+                style="max-width: 20px;" />
+  </div>
+  <div class="col-sm-10">
+    <p>hans@yukeva.com</p>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-12">
+    <i class="color-mode-fb" style="max-width: 40px;"></i>
+                <i class="color-mode-ig" style="max-width: 40px;"></i>
+                <i class="color-mode-tw" style="max-width: 40px;"></i>
+  </div>
+  
+</div>
 
-            <p class="footer-text mb-0"><img src="https://cdn.erakomp.co.id/assets/yukeva/4.png" alt="" srcset=""
-                style="max-width: 30px; margin-right: 20px;">+1 234
-              567 8900</p>
-            <p class="footer-text mb-0"><img src="https://cdn.erakomp.co.id/assets/yukeva/mail.png"
-                style="margin-right: 20px; max-width: 20px;" /> hans@yukeva.com</p>
+                
 
-          </div>
+              </div>
         </div>
 
       </div>
@@ -252,7 +439,7 @@
       <div class="row">
 
         <div class="col-lg-12 col-12">
-          <p class="copyright-text text-center" style="color:#FFD700;">Copyright &copy; 2021</p>
+          <p class="copyright-text text-center" style="color:#FFD700; font-family:Aileron!important;">Copyright &copy; 2021</p>
 
         </div>
 
