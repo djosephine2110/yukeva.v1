@@ -355,7 +355,7 @@
         </div>
 
         <div class="col-lg-6 col-12 right-img">
-          <img src="https://cdn.erakomp.co.id/assets/yukeva/about-left-image.png" alt="" style="width:500px;">
+          <i class="color-img-left"></i>
         </div>
 
       </div>

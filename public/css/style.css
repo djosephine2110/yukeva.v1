@@ -475,6 +475,33 @@ content: url('https://cdn.erakomp.co.id/assets/hrd_app/Untitled-1.png');
                     color: #FFD700
                     ;
                   }
+
+                  .color-img-left:after {
+                    font-family: 'IBM Plex Sans Hebrew', sans-serif;  
+                    content: url('https://cdn.erakomp.co.id/assets/yukeva/yukeva_light.png');
+
+                    margin-left: 2px;
+                      font-size: 30px;
+                      color: #FFD700
+                      ;
+                      
+                    }
+                    .dark-mode .color-img-left {
+                    font-family: 'IBM Plex Sans Hebrew', sans-serif;  
+                    content: url('https://cdn.erakomp.co.id/assets/yukeva/yukeva.png');
+                    margin-left: 2px;
+                   
+                      font-size: 30px;
+                      color: #FFD700
+                      ;
+                      
+                    }
+                    div.col-lg-6.col-12.right-img {
+                      margin-top: 20%!important;
+                    }
+                    .dark-mode.col-lg-6.col-12.right-img {
+                      width: 40%;
+                    }
   
 .dark-mode {
   background: #20130e;
