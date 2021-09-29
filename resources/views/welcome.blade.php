@@ -7,13 +7,13 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title></title>
+  <title>Yukeva</title>
 
   <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{asset('css/unicons.css')}}">
   <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
   <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
-
+<link rel="shortcut icon" href="https://cdn.erakomp.co.id/assets/hrd_app/normal.png" >
   <!-- MAIN STYLE -->
   <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
@@ -275,19 +275,7 @@
           <h2 class="mb-4" style="color:#FFD700;">Services</h2>
 
           <div class="timeline">
-            <div class="timeline-wrapper">
-              <div class="timeline-yr">
-                <span><i class="color-mode-iso"></i>
-                </span>
-              </div>
-              <div class="timeline-info">
-                <h3>ISO COMPLIANT
-                </h3>
-                <p>We are ISO and OSAS certified since 2004 and has won numerous awards and accolades over the years.
-                </p>
-              </div>
-            </div>
-
+            
             <div class="timeline-wrapper">
               <div class="timeline-yr">
                 <span><i class="color-mode-phy"></i></span>
@@ -417,9 +405,9 @@
 <br>
 <div class="row">
   <div class="col-sm-12">
-    <i class="color-mode-fb" style="max-width: 40px;"></i>
+    <!--<i class="color-mode-fb" style="max-width: 40px;"></i>
                 <i class="color-mode-ig" style="max-width: 40px;"></i>
-                <i class="color-mode-tw" style="max-width: 40px;"></i>
+                <i class="color-mode-tw" style="max-width: 40px;"></i>-->
   </div>
   
 </div>
