@@ -405,9 +405,9 @@
 <br>
 <div class="row">
   <div class="col-sm-12">
-    <!--<i class="color-mode-fb" style="max-width: 40px;"></i>
-                <i class="color-mode-ig" style="max-width: 40px;"></i>
-                <i class="color-mode-tw" style="max-width: 40px;"></i>-->
+    <!--<i class="color-mode-fb" style="max-width: 40px;"></i>-->
+                <a href="https://www.instagram.com/yukeva.id/"><i class="color-mode-ig" style="max-width: 40px;"></i></a>
+               <!-- <i class="color-mode-tw" style="max-width: 40px;"></i>-->
   </div>
   
 </div>
